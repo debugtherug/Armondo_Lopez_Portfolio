@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Projects</title>
+    <link href="/css/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+  <%- include('partials/nav.ejs', { currentPage: 'projects'}) %>
+
+    <div class="project">
+      <h3 class="project-title">ISEEU Android Application</h3>
+      <img src= "img/ISEEU Logo.gif" alt="logo" width="200" height="200" class="project-pic"> 
+      <p class="short-desc">Combining android development with therapy-focused AI companionship!</p>
+      <p class="full-desc" style="display: none;">
+        Myself and three of my fellow students at CSUMB took on this project as our end of program project. We were the only team in our cohort to get a project that was from a local industry partner. 
+        <br><br>
+        We worked with Drs. Angel Liang and Rupert Yan to create a companion android app for the board game Empower Empathy. The board game aims to help players better understand each other in a casual and fun format. 
+        <br><br>
+        The android application was meant to provide players with an interactive experience, allowing them to play a game similar to Heads-Up, engage with a vast quantity of thought-provoking ice-breaker questions, and even interact with an AI chatbot that was adept at discussing issues surrounding human emotions. 
+        <br><br><br>
+        INSERT APP WALKTHROUGH WITH CAPTIONS HERE
+        <br><br><br>
+        The largest issue I had to overcome with this project was working with technologies that I had no prior experience with. Refining the AI chatbot to engage better with people potentially asking for mental health support was exceptionally challenging. Through it all though, I feel as though I greatly improved upon my ability to teach myself how to solve complication issues using the people around me and internet resources!
+        <br><br>
+        <strong>Technologies used:</strong>
+        Mobile Application Development, Xcode, Swift, Android Studio, Kotlin, Java, Version Control, Software Project Management, Large Language Models (AI), debugging
+        <br>
+        <strong>Github repository link: <a href="https://github.com/debugtherug/ISEEU" target="_blank"> https://github.com/debugtherug/ISEEU</a></strong>
+      </p>
+      <button class="see-more">See More</button>
+    </div>
+
+    
+  <script src="/js/scripts.js"></script> <!-- ✅ Corrected path -->
+    <br><br><br>
+    
+</body>
+  <%- include('partials/footer.ejs') %>
+</html>

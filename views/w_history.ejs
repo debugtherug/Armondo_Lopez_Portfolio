@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<%- include('partials/nav.ejs', { currentPage: 'w_history'}) %>
+
+  <html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="/css/style.css" rel="stylesheet" type="text/css"/>
+  </head>
+      <body>
+          <%- include('partials/nav.ejs', { currentPage: 'w_history' }) %>
+
+          <div class="timeline-container">
+              <% jobs.forEach(job => { %>
+              <div class="timeline-card">
+                  <div class="card-inner">
+                      <!-- Front of the card -->
+                      <div class="card-front">
+                          <h2><%= job.title %></h2>
+                          <h3><%= job.company %></h3>
+                          <p><%= job.duration %></p>
+                          <p><%= job.description %></p>
+                          
+                      </div>
+
+                      <!-- Back of the card -->
+                      <div class="card-back">
+                          <h2>Skills Learned:</h2>
+                          <ul>
+                              <% if (job.skills) { %>
+                              <% job.skills.forEach(skill => { %>
+                              <li><%= skill %></li>
+                              <% }) %>
+                              <% } %>
+                          </ul>
+                          
+                      </div>
+                  </div>
+              </div>
+              <% }); %>
+          </div>
+
+          <%- include('partials/footer.ejs') %>
+          <script src="/js/scripts.js"></script>
+      </body>
+  </html>

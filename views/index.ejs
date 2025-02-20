@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="/css/style.css" rel="stylesheet" type="text/css"/>
+</head>
+  
+<body>
+  <%- include('partials/nav.ejs', { currentPage: 'home'}) %>
+
+
+  <%- include('partials/header.ejs') %>
+  <script src="script.js"></script>
+  <img src= "img/ArmondoLopez.jpg" alt="my pic" width="200" height="200" class="my-pic"> 
+  <script src="https://replit.com/public/js/"></script>
+
+  <p>
+    Welcome to my website!
+
+    I'm building this mainly to show off the work that I'm doing as well as serve as a means of contact for potential professional connections!
+  <br><br>
+    Feel free to click on the 'About Me' section if you want some of the background information on me and my life.
+  <br><br>
+    Navigate to 'My Projects' section to see the programming projects I've worked on or that I'm still working on!
+  <br><br>
+    Feel free to check out the 'Contact Me' section if you want to get in contact with me. Have a great day!
+  </p>
+
+  <br />
+    <%- include('partials/footer.ejs') %>
+</body>
