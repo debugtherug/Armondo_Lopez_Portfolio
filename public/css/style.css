@@ -279,3 +279,15 @@ h4 {
 .download-button:hover {
   background-color: #004d99;
 }
+
+.see-more {
+  display: block; /* Allows the button to span the full width of its container */
+  margin: 10px auto; /* Centers the button by setting automatic margins */
+  padding: 10px;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center; /* Centers the button text */
+}
