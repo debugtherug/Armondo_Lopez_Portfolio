@@ -278,6 +278,7 @@ h4 {
 
 .download-button:hover {
   background-color: #004d99;
+  animation: glow 1.5s infinite alternate;
 }
 
 .see-more {
@@ -290,4 +291,13 @@ h4 {
   border-radius: 5px;
   cursor: pointer;
   text-align: center; /* Centers the button text */
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(0, 0, 102, 0);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 0, 102, 0.5);
+  }
 }
