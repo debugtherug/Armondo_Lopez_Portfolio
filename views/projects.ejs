@@ -8,8 +8,6 @@
 </head>
 <%- include('partials/nav.ejs', { currentPage: 'projects'}) %>
 <body>
-
-  
     <br><br><br>
     <div class="project">
       <h3 class="project-title">ISEEU Android Application</h3>
@@ -34,7 +32,7 @@
 
     <div class="project" >
       <h3 class="project-title">Twitter Clone</h3>
-      <img src="img/ISEEU Logo.gif" alt="logo" width="200" height="200" class="project-pic">
+      <img src="img/twitter.png" alt="logo" width="200" height="200" class="project-pic">
       <p class="short-desc">Created a functional twitter clone by implementing API endpoints!</p>
       <p class="full-desc" style="display: none;">
         I worked with one other person on this project as part of the Fastrack program offered by Cook Systems. 
@@ -59,6 +57,11 @@
 
     </div>
 
+  
+    <div class="github-content">
+      <img src="<%= githubData.avatar_url %>" alt="GitHub Avatar" width="100">
+      <p><%= githubData.bio %></p>
+    </div>
     
   <script src="/js/scripts.js"></script> 
     <br><br><br>

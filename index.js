@@ -1,6 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import nodemailer from 'nodemailer';
+import fetch from 'node-fetch';
 
 const app = express();
 app.set("view engine", "ejs");
@@ -38,6 +39,22 @@ const jobs = [
   }
 ];
 
+// Fetch GitHub data
+async function getGithubData() {
+  try {
+    const response = await fetch('https://api.github.com/users/debugtherug');
+    const data = await response.json();
+    // Extract only important data
+    return {
+      avatar_url: data.avatar_url,
+      bio: data.bio,
+    };
+  } catch (error) {
+    console.error('Error fetching GitHub data:', error);
+    return { avatar_url: '', bio: 'Failed to fetch bio'};
+  }
+}
+
 // Routes
 app.get('/', (req, res) => {
   res.render('index', { "currentPage": 'home' });
@@ -47,8 +64,9 @@ app.get('/about', (req, res) => {
   res.render('about', { "currentPage": 'about' });
 });
 
-app.get('/projects', (req, res) => {
-  res.render('projects', { "currentPage": 'projects' });
+app.get('/projects', async (req, res) => {
+  const githubData = await getGithubData();
+  res.render('projects', { "currentPage": 'projects', githubData });
 })
 
 app.get('/w_history', (req, res) => {
